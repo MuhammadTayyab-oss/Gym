@@ -1,0 +1,297 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+body {
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    background:url(../Images/bkgokuuu.jpg);
+    background-position: center 100px;
+    background-repeat: no-repeat;
+    background-size: initial;
+    
+}
+/****************** HEADER ******************/
+
+
+
+.Hcontainer{
+
+    background-color: rgb(10, 2, 17);
+    display: flex;
+    justify-content: space-between; /*aligning x axis horizontal */
+    align-items: center; /*align y axis vertical */
+    /* padding: 5px; */
+    flex-wrap: wrap;
+    height: 100px;
+    overflow: hidden;
+    border-bottom: 5px solid purple;
+    position: sticky; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the topof the page */
+    width: 100%; 
+  
+}
+
+/* image and heading div*/
+.left-navbar{
+    margin-left: 30px;
+
+}
+
+.left-navbar img{    /* LOGO IN NAVBAR */
+    filter: invert(100%); /* making black logo to WHITE */
+    height: 60px;               
+    width: 140px;
+    transition: 1s;
+    
+}
+.left-navbar img:hover {      /*hover on navbar dumbell logo */
+    transform:scale(1.5);
+
+}
+
+#Brand-Name{
+    color: white;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Averia Sans Libre', cursive;
+    
+
+ 
+}
+/* image and heading div ENDS*/
+
+
+
+.navbar li { 
+    /* putting items like float */
+    display: inline-flex;  
+    list-style: none;
+    margin: 0px 10px 0px 10px;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+
+
+.Hcontainer a {    /*navbar items text color */
+    text-decoration: none;
+    color: white;
+    /* transition: 1s; */
+}
+
+
+.navbar li:hover {
+    background-color:rgb(156, 36, 160);
+    font-size: 1.2em;
+    padding: 24px;
+    border-top: 3px solid rgb(27, 218, 27) ;
+  
+    
+ 
+    /* height: 100%; */
+
+}
+
+.login-btn {
+    margin-right: 80px;
+    background-color: rgb(255, 0, 0);
+    padding: 4px 23px 4px 23px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 3px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    color: black;
+    
+    
+}
+
+/**** HEADER ENDS***/
+
+/**FOOTER TOP AREA STARTS**/
+
+.Fcontainer {
+        background-color: black;
+        color: white;
+        margin-top: 768px;      /* leaving space between for picture */
+        border-top: 5px solid purple;
+        
+        
+        
+}
+
+#footer-top-area {
+    padding: 30px;
+        display: flex;
+        justify-content: space-around;  /* flex works on direct child so not putting it in container */
+        
+}
+
+#footer-top-area section h3 {
+    padding-bottom: 15px;
+}
+
+#footer-top-area hr {
+   
+    margin-bottom: 25px;
+    border: 1px solid rgb(5, 211, 5);   /* green line below headings */
+    width: 200px;
+}
+
+#footer-top-area p {
+    line-height: 3em;
+}
+
+.Fcontainer a {
+    text-decoration: none;
+    color: white;
+       /* text color in footer paragraphs */
+}
+
+#address #num {
+    transition: 0.3s; /* transition for number */
+}
+
+#address #num:hover {
+    font-size: 1.2em;          /* number hover  and mail*/
+    background-color: purple;
+}
+#social p {
+
+    transition: 0.3s;
+}
+
+#social p:hover {
+    transform: translateX(20px);
+}
+
+ #social a:hover {  
+    color: purple;
+    font-weight: bolder;
+
+    
+} 
+
+.sicons {  /* social media icons */
+    font-size: 30px;
+    margin-right: 20px;
+    vertical-align:middle;
+    transition: 0.3s;
+
+} 
+.fa-envelope {
+    color: #9500da;
+}
+
+.fa-phone{
+    color: rgb(8, 221, 8);
+    
+    transform: scaleX(-1);
+}
+
+.fa-facebook{
+
+    color: #0210d3;
+}
+
+.fa-instagram{ 
+    color: #f09433; 
+
+  }
+
+
+.fa-twitter{
+    text-shadow: 1px 1px 1px #ccc;
+
+    color: #00acee;
+}
+
+.fa-github{
+   
+
+    color: #f1b189;
+}
+
+.fa-linkedin{
+    
+
+    color: #0072b1;
+}
+
+.sicons:hover {
+    font-size: 3em;
+}
+
+#quote {
+    display: flex;   /* goku pic and text aligned together same row and in middle */
+    align-items: center;
+}
+
+#quote img {
+    height: 190px;
+    width: 140px;  /* GOKU pic */
+    transition: .5s;
+    
+}
+
+#quote img:hover {
+    transform: translateX(10px) rotate(10deg) translateY(5px) scale3d(2,2,2);
+    
+}
+
+#quote p {
+    /* margin-top: 60px;       */    /*using flex instead in div
+    /* float: left; */   
+    color: rgb(255, 251, 0);
+    font-family: 'Graduate', cursive;
+    font-size: 1.2em;
+
+}
+
+
+
+/**FOOTER TOP AREA ENDS**/
+
+
+/**FOOTER BOTTOM AREA STARTS**/
+
+#footer-bottom-area {
+
+    background-color: #121212;
+    padding: 22px 0px 22px 0px;
+    margin-top: 10px;
+    
+}
+
+#cp {
+    text-align: center;
+    color: white;
+    font-size: 1.1em;
+    font-family: 'Averia Sans Libre';
+}
+
+#cp a{
+    color: rgb(240, 142, 15);
+}
+
+
+#cp a:hover {
+    color: rgb(150, 226, 8);
+}
+
