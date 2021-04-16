@@ -9,20 +9,25 @@
     box-sizing: border-box;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+    
+  }
+  
 
 body {
     /* font-family: 'Lato', sans-serif; */
     font-family: 'Poppins', sans-serif;
     background:url(../Images/bkgokuuu.jpg);
-    background-position: center 100px;
+    background-position: center 108px;
     background-repeat: no-repeat;
-    background-size: initial;
-    
+    /* background-size: initial; */
+    /* height: 100vh; */
+
 }
 /****************** HEADER ******************/
 
-
+ 
 
 .Hcontainer{
 
@@ -30,14 +35,15 @@ body {
     display: flex;
     justify-content: space-between; /*aligning x axis horizontal */
     align-items: center; /*align y axis vertical */
-    /* padding: 5px; */
+    padding: 5px;
     flex-wrap: wrap;
-    height: 100px;
+    
     overflow: hidden;
     border-bottom: 5px solid purple;
     position: sticky; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the topof the page */
-    width: 100%; 
+    /* width: 100%;  */
+    height: auto;
   
 }
 
@@ -72,9 +78,18 @@ body {
 }
 /* image and heading div ENDS*/
 
+/* mid navbar items starts */
+
+.hicons{
+
+    font-size: 20px;
+    margin-right: 5px;
+    /* vertical-align:middle; */
+    transition: 0.3s;
+}
 
 
-.navbar li { 
+.navbar li {   /*navbar items middle */
     /* putting items like float */
     display: inline-flex;  
     list-style: none;
@@ -98,13 +113,11 @@ body {
     font-size: 1.2em;
     padding: 24px;
     border-top: 3px solid rgb(27, 218, 27) ;
-  
-    
  
     /* height: 100%; */
 
 }
-
+/* mid navbar items starts */
 .login-btn {
     margin-right: 80px;
     background-color: rgb(255, 0, 0);
@@ -188,13 +201,17 @@ body {
     
 } 
 
-.sicons {  /* social media icons */
+.ficons {  /* social media icons */
     font-size: 30px;
     margin-right: 20px;
     vertical-align:middle;
     transition: 0.3s;
 
 } 
+.ficons:hover {   /* increasing social icons size when hover */
+    font-size: 3em;
+}
+
 .fa-envelope {
     color: #9500da;
 }
@@ -234,9 +251,6 @@ body {
     color: #0072b1;
 }
 
-.sicons:hover {
-    font-size: 3em;
-}
 
 #quote {
     display: flex;   /* goku pic and text aligned together same row and in middle */
@@ -295,3 +309,19 @@ body {
     color: rgb(150, 226, 8);
 }
 
+.fa-arrow-circle-up {
+    position:fixed ;
+    bottom: 15px;
+    right: 15px;
+    font-size: 1.6em;  
+    transition: 1s;
+    color: rgb(255, 0, 0);
+    padding: 3px 5px 3px 5px;
+    
+       
+}
+
+.fa-arrow-circle-up:hover {
+    background-color: #555;
+    transform:translateY(-20px);
+}
