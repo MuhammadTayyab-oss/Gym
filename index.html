@@ -5,7 +5,8 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> <!--fonts lato-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!--fonts lato-->
     <link rel="icon" type="image/gif" href="./icons/favicon-32x32.png" alt="Gym Icon">
     <!-- <link rel="icon" type="image/gif" href="" alt="Gym Icon"> -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -21,8 +22,8 @@
 
 </head>
 
-<body>
-    
+<body id="home_page">
+
     <header class="Hcontainer">
         <figure class="left-navbar">
             <a href="index.html">
@@ -38,14 +39,24 @@
         </div> -->
         <nav class="navbar">
             <ul>
-                <li><a href="#"><span class="hicons"><i class="fas fa-home"></i></span>HOME</a></li>
-                <li><a href="#"><span class="hicons"><i class="fas fa-user"></i></i></span>ABOUT</a></li>
-                <li><a href="#"><span class="hicons"><i class="fas fa-mobile-alt"></i></span>CONTACT US</a></li>
-                <li><a href="#"><span class="hicons"><i class="far fa-clock"></i></span>TIMINGS</a></li>
+                <li><a id="home" href="index.html" ><span class="hicons"><i class="fas fa-home"></i></span>HOME</a></li>
+                <li><a id="about" href="#"><span class="hicons"><i class="fas fa-user"></i></i></span>ABOUT</a></li>
+                <li><a id="contact" href="#"><span class="hicons"><i class="fas fa-mobile-alt"></i></span>CONTACT US</a></li>
+                <li><a id="time" href="#"><span class="hicons"><i class="far fa-clock"></i></span>TIMINGS</a></li>
             </ul>
         </nav>
         <a class="login-btn" href="#">LOGIN</a>
+        
     </header>
+    <hr id="progressbar">
+    <br> <br> <br> <br> <br> 
+    <div class="container">
+        <div id="main-content">
+            <p>When you have a clear vision of your goal, it’s easier to take the first step toward it.</p>
+            <a id="start" href="">START NOW</a>
+
+        </div>
+    </div>
 
     <footer class="Fcontainer">
         <div id="footer-top-area">
@@ -58,9 +69,8 @@
 
                 <br>
                 <div id="quote">
-                    <p>Become a Super Saiyan  <br> in just 1 month! </p>
-                    
-                    
+                    <p>Become a Super Saiyan <br> in just 1 month! </p>
+
                     <img src="./Images/supers.png" alt="Goku Super Saiyan image">
                 </div>
 
@@ -99,8 +109,8 @@
             <p id="cp">&copy; Copyright GOKU GYM 2021. All Rights Reserved. Developed by <a
                     href="https://rahulgianchandani.github.io/Portfolio/" target="_blank">Rahul Gianchandani</a></p>
         </div>
-        <div id ="scrolltotop">
-            <a href= "#top"><i class="fa fa-arrow-circle-up"></i></a>
+        <div id="scrolltotop">
+            <a href="#top"><i class="fa fa-arrow-circle-up"></i></a>
         </div>
     </footer>
 
