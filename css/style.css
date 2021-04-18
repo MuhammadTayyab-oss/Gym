@@ -27,22 +27,6 @@ body {
 
 }
 
-.container::before{
-    content: "";
-    background:url(../Images/blackbg.jpg) no-repeat center center/cover;
-    
-    position: absolute;
-    /* top: 70px; */
-    height: 100%;
-    width: 100%;
-    z-index: -99;
-    opacity: 0.8;
-    /* right: 300px; */
-   
-
-
-}
-
 /****************** HEADER ******************/
 
  
@@ -174,7 +158,7 @@ body {
     position: fixed;
     width: 100%;
     animation-name: bordergui;
-    animation-duration: 6s;
+    animation-duration: 4s;
     animation-delay: 1s;
     animation-timing-function: linear;
     animation-iteration-count:2;
@@ -226,6 +210,27 @@ body {
 
 /**** MAIN CONTENT JUMBOTRON ****/
 
+/*BACKGROUND IMAGE */
+.container::before{
+    content: "";
+    background:url(../Images/blackbg.jpg) no-repeat center center/cover;
+    /* background: transparent; */
+    position: absolute;
+    /* top: 70px; */
+    height: 100%;
+    width: 100%;
+    z-index: -99;
+    /* opacity: 0.8; */
+    /* right: 300px; */
+    
+/* -webkit-filter: blur(1px) brightness(0.5);
+  -moz-filter: blur(1px) brightness(0.5);
+  -ms-filter: blur(1px) brightness(0.5);
+  -o-filter: blur(1px) brightness(0.5); */
+  filter: blur(0px) brightness(0.3);
+
+}
+
 
 .container {
     /* margin-top: 150px; */
@@ -238,38 +243,43 @@ body {
     
 }
 
+#main-content  p:first-child{
+    padding-top: 200px;
+    
+}
 
 
-#main-content p{
+#main-content  p{
+    /* position: relative; */
     font-size: 40px;
     font-family: Poppins, sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: bold;
-    text-align:end;
-    padding-top: 100px;
-    margin: 0px 80px 20px 680px;
-    text-align: center;
+    text-align:center;
     
+    margin: 0px 300px 40px 300px;
+    text-align: center;
+    background: transparent;
     
    
 }
 
-#main-content a{
-    display: block;
+#start{
+   display: block;
     text-decoration: none;  
     color: white;
     font-size: 16px;
-    letter-spacing: 1px;
+    
     font-family: Poppins, sans-serif;
-    
     font-weight: bold;
-    margin-left: 900px;
-    width:fit-content;
-    padding: 15px 35px 15px 35px;
-    
-    border: 2px solid rgb(255, 94, 0);
-    border-radius: 50px;
+    width: fit-content;
     text-align: center;
+    text-align: center;
+    margin: auto;
+    padding: 15px 35px 15px 35px;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 50px;
+    
 
 
 
