@@ -18,33 +18,44 @@ html {
 body {
     /* font-family: 'Lato', sans-serif; */
     font-family: 'Poppins', sans-serif;
-    background:url(../Images/bkgokuuuu.jpg) center 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background:url(../Images/bkgokuuuu.jpg) center 10px; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     
-    background-attachment: fixed;
-    
-    
-
-    
-    
-    
+    /* background-attachment: fixed; */
     
 
 }
+
+.container::before{
+    content: "";
+    background:url(../Images/blackbg.jpg) no-repeat center center/cover;
+    
+    position: absolute;
+    /* top: 70px; */
+    height: 100%;
+    width: 100%;
+    z-index: -99;
+    opacity: 0.8;
+    /* right: 300px; */
+   
+
+
+}
+
 /****************** HEADER ******************/
 
  
 
 .Hcontainer{
-
+    z-index: 1;
     background-color: rgb(10, 2, 17);
     display: flex;
     justify-content: space-between; /*aligning x axis horizontal */
     align-items: center; /*align y axis vertical */
     padding: 5px;
     flex-wrap: wrap;
-    
+    /* opacity: 0.1; */
     overflow: hidden;
     
     position: sticky; /* Set the navbar to fixed position */
@@ -220,7 +231,9 @@ body {
     /* margin-top: 150px; */
   
     /* border: 1px solid red; */
-    height: 500px;
+    height: 1000px;
+    width: 100%;
+    position: relative;
     
     
 }
@@ -230,14 +243,15 @@ body {
 #main-content p{
     font-size: 40px;
     font-family: Poppins, sans-serif;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-align:end;
-    margin: 100px 80px 20px 680px;
+    padding-top: 100px;
+    margin: 0px 80px 20px 680px;
     text-align: center;
     
-
     
+   
 }
 
 #main-content a{
@@ -282,7 +296,8 @@ body {
 .Fcontainer {
         background-color: black;
         color: white;
-        margin-top: 768px;      /* leaving space between for picture */
+         /* leaving space between for picture */
+        /* margin-top: 768px;      */
         border-top: 5px solid purple;
         
         
