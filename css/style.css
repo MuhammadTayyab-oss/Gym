@@ -119,8 +119,8 @@ body {
     padding: 24px; 
     border-top: 3px solid rgb(27, 218, 27) ;
     }
-
-.navbar li:hover{
+    
+.navbar li:hover:not(.active){
     background-color:rgb(156, 36, 160);
     font-size: 1.2em;
     padding: 24px;
@@ -152,29 +152,31 @@ body {
 /*** ADDING PROGRESS BAR AS NAVBAR BOTTOM BORDER ****/
 
 #progressbar{
+    z-index: 1;
     height: 5px;
     background: purple;
     border: solid purple;
     position: fixed;
     width: 100%;
     animation-name: bordergui;
-    animation-duration: 4s;
+    animation-duration: 5s;
     animation-delay: 1s;
     animation-timing-function: linear;
-    animation-iteration-count:2;
-    animation-direction: alternate-reverse;
+    animation-iteration-count:1;
+    animation-direction: forwards;
     
 }
 
-
 @keyframes bordergui{
-    from{
+    /* from{
         width: 0%;
     }
 
     to {
         width: 100%;
-    }
+    } */
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
     
     20% {
         background: rgb(30, 255, 30);
@@ -227,7 +229,7 @@ body {
   -moz-filter: blur(1px) brightness(0.5);
   -ms-filter: blur(1px) brightness(0.5);
   -o-filter: blur(1px) brightness(0.5); */
-  filter: blur(0px) brightness(0.3);
+  filter: blur(1px) brightness(0.3);
 
 }
 
@@ -243,28 +245,63 @@ body {
     
 }
 
+
+/*** 1st section ****/
+
+
+
 #main-content  p:first-child{
-    padding-top: 200px;
-    
-}
-
-
-#main-content  p{
-    /* position: relative; */
-    font-size: 40px;
     font-family: Poppins, sans-serif;
-    color: rgb(255, 255, 255);
     font-weight: bold;
-    text-align:center;
-    
-    margin: 0px 300px 40px 300px;
+    padding-top: 200px;
+    margin: 0px 300px 100px 300px;
     text-align: center;
-    background: transparent;
-    
-   
+    text-align:center;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
 }
 
-#start{
+
+#main-content p:nth-child(2){
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-left: 250px;
+    border-left: 4px solid rgb(212, 64, 18);
+    border-spacing: 10px; padding-left: 11px;   
+    /* animation: line 2s ease-in-out 1s 1 forwards;  */
+    white-space: nowrap;
+    overflow: hidden;
+    animation:appear 3s ease ;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    
+}       
+
+@keyframes appear {
+    from {
+         transform: scaleX(2);
+         opacity: 0; 
+        }
+        
+    to   { 
+        transform: scaleX(1); 
+    }
+}
+
+#main-content p:nth-child(3){
+    margin-top: 5px;
+    color: rgb(212, 64, 18);
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 265px;
+    font-family: 'Graduate', cursive;
+    
+    
+    
+}
+/* start now anchor */
+#start{  
    display: block;
     text-decoration: none;  
     color: white;
@@ -275,20 +312,28 @@ body {
     width: fit-content;
     text-align: center;
     text-align: center;
-    margin: auto;
+    margin-right: auto;
+    margin-left:auto;
     padding: 15px 35px 15px 35px;
     border: 2px solid rgb(255, 0, 0);
     border-radius: 50px;
+    animation: goup 3s ease ;
     
+}
+
+@keyframes goup {
+   
 
 
-
+    from {
+        opacity: 0;
+        margin-top: 400px;
+    }
 }
 
 
 
-
-
+/****1st section of MID CONTENT ends***/
 
 
 
