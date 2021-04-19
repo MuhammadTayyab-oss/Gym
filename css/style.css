@@ -659,12 +659,14 @@ body {
     /* float: right; */
     
 }
-
+.left-navbar{
+    float: left;
+}
 
 .navbar ul  {
     flex-direction: column;
         text-align: center;
-        padding-top: 20px;
+        /* margin-top: 150px; */ padding-top: 20px;
         clear: both;  
 }
 
