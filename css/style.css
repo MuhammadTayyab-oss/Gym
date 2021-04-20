@@ -12,10 +12,9 @@
 }
 html {
     scroll-behavior: smooth;
-    
+   
 
   }
-  
 
 body {
     /* font-family: 'Lato', sans-serif; */
@@ -26,7 +25,7 @@ body {
     
     /* background-attachment: fixed; */
     
-    
+    width: 100vh;    
    
    
     
@@ -269,7 +268,7 @@ body {
   
     /* border: 1px solid red; */
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
     
     
