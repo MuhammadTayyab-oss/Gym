@@ -13,8 +13,7 @@
 html {
     scroll-behavior: smooth;
     
-    overflow-x: hidden;
-   
+
   }
   
 
@@ -28,7 +27,6 @@ body {
     /* background-attachment: fixed; */
     
     
-    overflow-x: hidden;
    
    
     
