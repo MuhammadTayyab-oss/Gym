@@ -12,6 +12,7 @@
 html {
     scroll-behavior: smooth;
     
+    
   }
   
 
@@ -122,12 +123,13 @@ body {
     /* transition: 1s; */
 }
 
-
-#home_page #home {  /*ACTIVE CLASS */
+/*ACTIVE CLASS */
+#home_page #home {  
     background-color:rgb(156, 36, 160);
     /* font-size: 1.2rem; */
     padding: 10px; 
     border-top: 3px solid rgb(27, 218, 27) ;
+    width: 100%;
     }
     
 .navbar li:hover:not(.active){
@@ -532,7 +534,9 @@ body {
     background-color: #121212;
     padding: 22px 0px 22px 0px;
     margin-top: 10px;
-    
+    display: flex;   
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #cp {
@@ -636,7 +640,9 @@ body {
 
 /*** SMALL SIZE MOBILE  ***/
 @media  (max-width: 750px){
-
+    html{
+        width: fit-content;
+    }
 
 .Hcontainer{
     display: block;
@@ -668,11 +674,14 @@ body {
         text-align: center;
         /* margin-top: 150px; */ padding-top: 20px;
         clear: both;  
+        align-items: center;
+        
 }
 
 .navbar ul li{
     flex-basis: auto;
-    padding-top: 20px;
+    padding-top: 20px; 
+    width: 100%;
 }
 
 #footer-top-area {
@@ -702,4 +711,8 @@ body {
 #social h3 {
     margin-top: 40px;
 }
+
+
+
+
 }
