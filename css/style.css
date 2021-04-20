@@ -8,11 +8,12 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+  
 }
 html {
     scroll-behavior: smooth;
-    
-    
+   
+ 
   }
   
 
@@ -25,7 +26,11 @@ body {
     
     /* background-attachment: fixed; */
     
-
+    
+    /* overflow-x: hidden; */
+   
+   
+    
 }
 
 /****************** HEADER ******************/
@@ -33,6 +38,7 @@ body {
  
 
 .Hcontainer{
+    overflow-x: visible;
     position: absolute;
     z-index: 1;
     background-color: rgb(10, 2, 17);
@@ -152,14 +158,25 @@ body {
     cursor: pointer;
     order: 1;
     
-    
 }
 
 .login-btn:hover {
     color: black;
-    
-    
+ 
 }
+/*hamburger menu */
+#checkbox {
+    order: 2;
+    display: none;
+}
+
+.fa-bars{
+    background-color: white;
+    font-size: 40px;
+    order: 1;
+}
+
+
 
 /**** HEADER ENDS***/
 
@@ -665,9 +682,7 @@ body {
 
 /*** SMALL SIZE MOBILE  ***/
 @media  (max-width: 800px){
-    html{
-        width: fit-content;
-    }
+    
 
 .Hcontainer{
     display: block;
@@ -695,18 +710,25 @@ body {
 }
 
 .navbar ul  {
+    
     flex-direction: column;
         text-align: center;
-        /* margin-top: 150px; */ padding-top: 20px;
+         padding-top: 20px;
         clear: both;  
-        align-items: center;
-        
+        align-items: center; 
+        /* display: none; */
+}
+
+#check:checked ~ .navbar ul {
+    display: block;
 }
 
 .navbar ul li{
     flex-basis: auto;
-    padding-top: 20px; 
-    width: 100%;
+   padding-bottom: 15px;
+    width: 90%;
+    
+    
 }
 
 #footer-top-area {
@@ -737,7 +759,14 @@ body {
     margin-top: 40px;
 }
 
+#checkbox {
+    clear: both;
+    text-align: end;
+    display: block;
+}
 
-
+#check {
+    
+}
 
 }
