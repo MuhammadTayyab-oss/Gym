@@ -13,12 +13,14 @@
 }
 html {
     scroll-behavior: smooth;
-   
+   height: 100%;
+   width: 100%;
 
   }
 
 body {
     
+ 
     /* font-family: 'Lato', sans-serif; */
     font-family: 'Poppins', sans-serif;
     /* background:url(../Images/bkgokuuuu.jpg) center 10px; */
@@ -110,7 +112,6 @@ body {
 }
 
 
-
 .navbar ul {
     display: flex;
     
@@ -125,10 +126,6 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     /* flex-basis: 100%; */
-    
-   
-    
-    
     
 }
 
@@ -147,7 +144,7 @@ body {
     padding: 10px;
     border-top: 3px solid rgb(27, 218, 27) ;
     
-    display: block;  /* for full width background color */
+    
     }
     
     
@@ -179,11 +176,11 @@ body {
  
 }
 /*hamburger menu */
- #menu{
+ #toggleDiv{
     order: 2; /* putting it in last of navbar tho hidden */
     display: none;
     margin-right: 25px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     
 }
 
@@ -310,10 +307,10 @@ body {
     font-weight: bold;
     padding-top: 14.7vw;
     margin: 0px 20% 7.4% 20%;
-    
     text-align:center;
     color: rgb(255, 255, 255);
     font-size: 3em;
+    white-space: pre-line;
 }
 
 
@@ -877,6 +874,7 @@ section h3{
 #toggleDiv {
     text-align: right;
     clear: both;
+    display: block;
 }
 #menu {
     display: inline-block;
