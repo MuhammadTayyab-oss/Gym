@@ -39,8 +39,8 @@ function(event){
       scrollbtn.style.display = "none";
     }
 
-
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    var w = window.innerWidth;
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 && w > 800) {
       // document.querySelector(".Hcontainer").style.height = "70px";
       document.getElementById("logo").style.height= "40px";
       document.getElementById("logo").style.width= "100px";
