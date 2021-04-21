@@ -8,7 +8,8 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-  
+    /* outline: 1px solid red; */
+    /*outline to check the outside page elements */
 }
 html {
     scroll-behavior: smooth;
@@ -382,6 +383,7 @@ body {
 #start:hover{
     box-shadow: inset 300px 0 0 0 rgb(0, 0, 0);
     border-color: rgb(255, 255, 255);
+    transform: translateY(-10px);
     
     
    
@@ -469,11 +471,12 @@ section h3{
     background-color: purple;
 }
 #social p {
-
     transition: 0.3s;
+    
 }
 
 #social p:hover {
+   
     transform: translateX(20px);
 }
 
@@ -720,7 +723,9 @@ section h3{
    margin-right: 10px;
    padding: 2px 15px 2px 15px;
    border-radius: 50px;
-   
+   /* display: block;
+   width: fit-content;
+   margin: 5px auto; */
     
 }
 
@@ -775,13 +780,13 @@ section h3{
          padding-top: 20px;
         clear: both;  
         align-items: center; 
-        /* display: none; */
+        
 }
 
-#check:checked ~ .navbar ul {
-    display: block;
-}
+/* .navbar ul{
 
+    
+} */
 .navbar ul li{
    
    padding-bottom: 15px;
@@ -824,6 +829,7 @@ section h3{
     clear: both;
     text-align: end;
     display: block;
+    /* margin-top: 50px; */
 }
 
 #check {
