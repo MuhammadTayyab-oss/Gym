@@ -43,6 +43,7 @@ body {
     z-index: 1; /* so mid content won;t overlap */
     background-color: rgb(10, 2, 17);
     display: flex;
+    align-content: center;
     justify-content: space-between; /*aligning x axis horizontal */
     align-items: center; /*align y axis vertical */
     padding: 5px;
@@ -110,8 +111,11 @@ body {
     /* vertical-align:middle; */
     transition: 0.3s;
 }
+
+
 .navbar ul {
     display: flex;
+    
     
 }
 
@@ -124,6 +128,7 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     /* flex-basis: 100%; */
+   
     
     
     
@@ -151,6 +156,7 @@ body {
     /* font-size: 1.2em; */
     /* padding: 24px; */
     border-top: 3px solid rgb(27, 218, 27) ;
+    
 
 }
 
@@ -173,7 +179,7 @@ body {
  
 }
 /*hamburger menu */
-#checkbox {
+ #menu{
     order: 2; /* putting it in last of navbar tho hidden */
     display: none;
     margin-right: 25px;
@@ -181,7 +187,7 @@ body {
     
 }
 
-#checkbox .fa-bars{
+#menu{
     cursor: pointer;
     font-size: 30px;
     border-radius: 50px;
@@ -191,6 +197,9 @@ body {
      font-style: italic;
 }
 
+#menuLine {
+    display: none;
+}
 
 /**** HEADER ENDS***/
 
@@ -434,7 +443,7 @@ body {
     border: 1px solid rgb(5, 211, 5);   /* green line below headings */
     width: 200px;
     animation: hrlines 2s ease-in-out 1s 1 forwards; 
-            /* name duration functiontime duration iteration direction */
+            /*name duration timing-function delay iteration-count direction fill-mode; */
             
 }
 
@@ -606,8 +615,19 @@ section h3{
     transition: 1s;
     color: rgb(255, 0, 0);
     padding: 3px 5px 3px 5px;
+    animation: ScrbtnUp 0.5s ease-in-out 0s 1;
     
        
+}
+
+@keyframes ScrbtnUp{
+    from {
+        bottom: -20px;
+    }
+
+    to {
+        bottom: 15px;
+    }
 }
 
 .fa-arrow-circle-up:hover {
@@ -701,6 +721,10 @@ section h3{
          width: 100px;
      }
      
+     .navbar {
+        display: block ;
+    }
+
     
 }
 
@@ -710,7 +734,7 @@ section h3{
 
 /*** SMALL SIZE MOBILE  ***/
 @media  (max-width: 800px){
-    
+      
 
 .Hcontainer{
     display: block;
@@ -773,23 +797,26 @@ section h3{
     float: left;
 }
 
+.navbar {
+    display: none;
+    transition: 4s;
+}
+
 .navbar ul  {
     
     flex-direction: column;
         text-align: center;
-         padding-top: 20px;
+         padding-top: 10px;
         clear: both;  
         align-items: center; 
         
+        
 }
 
-/* .navbar ul{
 
-    
-} */
 .navbar ul li{
-   
-   padding-bottom: 15px;
+    font-size: 0.8em;
+   padding-bottom: 10px;
     width: 90%;
     
     
@@ -825,15 +852,40 @@ section h3{
     margin-top: 50px;
 }
 
-#checkbox {
+
+#menu {
+    display: block;
     clear: both;
     text-align: end;
+    
+   
+}
+
+#menuLine {
     display: block;
-    /* margin-top: 50px; */
+    margin-top: 10px;
+    border: 2px solid rgb(5, 211, 5);
+    width: 100%;
+    animation: menuline 1s ease-in-out 1 forwards; 
+    /* name duration timing-function delay iteration-count direction fill-mode; */
+ 
 }
 
-#check {
-    display: none;
+@keyframes menuline {
+from {
+    transform: scaleX(0);
 }
 
+to {
+    transform: scaleX(1);
 }
+}
+
+
+}
+
+
+
+
+
+

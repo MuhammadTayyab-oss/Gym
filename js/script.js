@@ -1,15 +1,65 @@
 document.addEventListener("DOMContentLoaded",
 function(event){ 
+ 
+  function Togglebar() {
+    var icon = document.querySelector("i");
+    var nav = document.querySelector(".navbar");
 
-    function classToggle() {
-        const navs = document.querySelectorAll('.navbar')
-        
-        navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
-      }
       
-      document.querySelector('.Navbar__Link-toggle')
-        .addEventListener('click', classToggle);
-// document.querySelector("button").addEventListener("click", reply)
-document.querySelector("button").onclick = show;
 
+       if (nav.style.display === "none") {
+       nav.style.display = "block ";
+     } else {
+       nav.style.display = "none ";
+      }
+    
+
+     
+  }
+
+  function myFunction() {
+    var w = window.innerWidth;
+  
+    if (w > 800) {
+      document.querySelector('.navbar').style.display ='block';
+    }
+    else {
+      document.querySelector('.navbar').style.display='none';
+    }
+  }
+
+
+  var scrollbtn = document.getElementById("scrolltotop")
+
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollbtn.style.display = "block";
+    } else {
+      scrollbtn.style.display = "none";
+    }
+
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      // document.querySelector(".Hcontainer").style.height = "70px";
+      document.getElementById("logo").style.height= "40px";
+      document.getElementById("logo").style.width= "100px";
+      document.getElementById("Brand-Name").style.fontSize= "1em";
+    } else {
+      // document.querySelector(".Hcontainer").style.height = "100px";
+      document.getElementById("logo").style.height = "60px";
+      document.getElementById("logo").style.width= "140px";
+      document.getElementById("Brand-Name").style.fontSize= "1.3em";
+    
+  }
+  }
+  
+
+
+
+
+  document.querySelector("i").onclick = Togglebar;
+  document.querySelector("body").onresize = myFunction;
+ 
+  
 }) ;
