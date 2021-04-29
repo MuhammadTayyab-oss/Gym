@@ -947,8 +947,8 @@ to {
 
 .about .image::before {
     content: "";
-    background: url(/Images/aboutGoku.jpg) no-repeat center center;
-    background-size: cover ;
+    background: url(/Images/gokuteam.jpg) no-repeat center center;
+    background-size: cover;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -1070,8 +1070,6 @@ to {
  }
 
 
-
-
  .card img {
     /* height: 300px; */
     height: 80%;
@@ -1085,8 +1083,6 @@ to {
     opacity: 0.7;
     filter: brightness(0.5);
     /* box-shadow: 10px 10px 8px 10px #888888; */
-    
-   
     
  }
 
