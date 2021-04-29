@@ -31,7 +31,7 @@ body {
  
     /* font-family: 'Lato', sans-serif; */
     font-family: 'Poppins', sans-serif;
-    /* background:url(../images/bkgokuuuu.jpg) center 10px; */
+    /* background:url(../Images/bkgokuuuu.jpg) center 10px; */
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
     
@@ -273,7 +273,7 @@ body {
 /*BACKGROUND IMAGE */
 .container::before{
     content: "";
-    background:url(../images/blackbg.jpg) no-repeat center center/cover;
+    background:url(../Images/blackbg.jpg) no-repeat center center/cover;
     /* background: transparent; */
     position: absolute;
     /* top: 70px; */
@@ -947,7 +947,7 @@ to {
 
 .about .image::before {
     content: "";
-    background: url(/images/aboutGoku.jpg) no-repeat center center;
+    background: url(/Images/aboutGoku.jpg) no-repeat center center;
     background-size: cover ;
     height: 100%;
     width: 100%;
