@@ -947,7 +947,7 @@ to {
 
 .about .image::before {
     content: "";
-    background: url(/Images/gokuteam.jpg) no-repeat center center;
+    background: url(../Images/gokuteam.jpg) no-repeat center center;
     background-size: cover;
     height: 100%;
     width: 100%;
