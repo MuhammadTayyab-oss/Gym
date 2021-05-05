@@ -11,7 +11,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Lobster&family=New+Rocker&family=Prata&display=swap');
 * {
     margin: 0;
     box-sizing: border-box;
@@ -946,7 +947,7 @@ to {
 
 
 
-
+/* FIRST HOME PAGE ENDS */
 
 
 
@@ -959,7 +960,7 @@ to {
 .about .image {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 400px;
  
    
     
@@ -1398,3 +1399,187 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
         font-size: 2em;
     }
 }
+
+/**************** HOME PAGE ENDS*********** */
+
+
+
+
+
+
+/* *********************CONTACT US PAGE******************* */
+
+.wrapper {
+    display: grid;
+  
+   grid-template-areas:
+                         "cvrPic cvrPic cvrPic cvrPic"
+                         "sidebar form address address"
+                         "sidebar contact contact contact "
+                         "map map map map";
+
+                         grid-gap: 10px;
+
+    grid-template-columns: 1fr 1.5fr 0.5fr 1fr;
+    
+                                          
+}
+
+.wrapper > div {
+   
+    
+    border: 3px solid black;
+    
+}
+/* grid header */
+.cvrPic{
+    height: 500px;
+    width: 100%;
+    grid-area: cvrPic;
+    position: relative;
+     /* display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    align-content: center;  */
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+   
+    
+}
+
+.cvrPic::before{
+    content: "";
+    background: url(/Images/header/header8.jpg) no-repeat center center /cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+    filter: blur(0px) brightness(0.4);
+    background-color: black;
+    
+    
+}
+
+.cvrPic h1{
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    word-spacing: 6px;
+    margin-bottom: 15px;
+    /* text-align: center;
+    align-self: center; */
+    
+
+}
+
+.cvrPic p{
+    color:white;
+    font-size: 18px;
+    font-weight: bolder;
+    /* flex-basis: 20%;    pushing a bit up */
+    width: 90%;
+    /* text-align: center; */
+    justify-self: center; 
+}
+
+
+
+/* grid header ends*/
+
+
+/* sidebar ME */
+.sidebar{
+    height: 1000px;
+   text-align: center;
+    grid-area: sidebar;
+    background-color: rgb(230, 219, 219);
+    
+ 
+}
+
+.sidePic {
+    background: url(/Images/sidebar/cat.jpg) no-repeat center center /cover;
+    height: 170px;
+    margin-bottom: 120px;
+
+}
+
+.sideProfile img {
+    border-radius: 50%;
+    height: 150px;
+    width: 140px;
+    transform: translateY(95px);
+    
+}
+
+.sidebar h1 {
+ margin-top: 20px;
+ /* margin-bottom: 20px; */
+font-family: 'New Rocker', cursive;
+font-family: 'Prata', serif;
+
+}
+
+.sidebar p:nth-of-type(odd){
+    font-size: 22px;
+    font-weight: bolder;
+   
+    font-family: 'Prata', serif;
+ 
+    margin-bottom: 30px;
+}
+
+
+.sidebar p:nth-of-type(even){
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 4px;
+    color: rgb(233, 88, 112);
+    margin-bottom: 30px;
+}
+
+.sidebar li{
+    list-style: none;
+}
+
+.sidebar .ficons{
+    font-size: 35px;
+    
+    margin-right: 0px;
+}
+
+.ficons:hover{
+    text-shadow: 0px 0px 10px rgb(238, 59, 238);
+    font-size: 5em;
+}
+
+/* sidebar ends */
+
+.form{
+    grid-area: form;
+}
+
+.address{
+     grid-area: address;
+}
+
+.contact{
+     grid-area: contact;
+}
+
+
+.map{
+    grid-area: map;
+}   
+
