@@ -525,6 +525,10 @@ section h3{
     color: #9500da;
 }
 
+.fa-map-marker-alt{
+    color: red;
+}
+
 .fa-phone{
     color: rgb(8, 221, 8);
     
@@ -1414,11 +1418,11 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
   
    grid-template-areas:
                          "cvrPic cvrPic cvrPic cvrPic"
-                         "sidebar form address address"
+                         "sidebar table address address"
                          "sidebar contact contact contact "
                          "map map map map";
 
-                         grid-gap: 10px;
+                         /* grid-gap: 10px; */
 
     grid-template-columns: 1fr 1.5fr 0.5fr 1fr;
     
@@ -1428,7 +1432,7 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
 .wrapper > div {
    
     
-    border: 3px solid black;
+    /* border: 3px solid black; */
     
 }
 /* grid header */
@@ -1447,6 +1451,7 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
     align-content: center;
     align-items: center;
     text-align: center;
+    justify-items: center;
    
     
 }
@@ -1476,8 +1481,7 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
     font-size: 50px;
     word-spacing: 6px;
     margin-bottom: 15px;
-    /* text-align: center;
-    align-self: center; */
+    
     
 
 }
@@ -1488,8 +1492,6 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
     font-weight: bolder;
     /* flex-basis: 20%;    pushing a bit up */
     width: 90%;
-    /* text-align: center; */
-    justify-self: center; 
 }
 
 
@@ -1566,18 +1568,187 @@ font-family: 'Prata', serif;
 
 /* sidebar ends */
 
-.form{
-    grid-area: form;
+
+/* Table starts */
+.table{
+    grid-area: table;
+    
+    
 }
 
-.address{
+/* table ends */
+
+/* addresses starts */
+
+.Contactaddress {
      grid-area: address;
+     font-style: normal;
+    /* justify-self: center; */
+    /* align-self: center; */
+    line-height: 2em;
+    letter-spacing: 1px;
+    /* margin-left: 10px; */
+    
+   
 }
+
+.Contactaddress .addressIcons {
+    font-size: 1.2em;
+    padding: 10px;
+    vertical-align: middle;
+
+}
+
+.Contactaddress a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.Contactaddress a:hover {
+    color: blue;
+}
+
+.Contactaddress p {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: black;
+}
+.Contactaddress  .fa-map-marker-alt{
+    color: red;
+}
+
+.Contactaddress .addressicons {
+    font-size: 30px;
+    padding: 7px 13px 7px 13px;
+}
+
+.Contactaddress .addressicons:hover{
+    background-color: rgb(201, 181, 181);
+    border-radius: 50%;
+}
+
+.Contactaddress h2:nth-child(7){
+    margin-bottom: 15px;
+}
+
+
+
+
+/* addresses ends */
+
+/* CONTACT section STARTS */
 
 .contact{
      grid-area: contact;
+     display: grid;
+     
+     grid-template-columns: repeat( 4, 1fr);
+     justify-content: center;
+     justify-items: center;
+     align-items: center;
+     align-content: center;
+     text-align: center;
+
+
 }
 
+.contactbox {
+    /* background-color: #b117ff; */
+    background-color: #37dca9;
+    height: 220px;
+    width: 220px;
+    position: relative;
+    
+  
+}
+
+.contactHeading{
+    grid-row: 1/-1;
+    grid-column: 1/-1;   
+    font-weight: bolder;
+    font-size: 1.3em;
+    margin-bottom: 100px;
+    font-family: monospace;
+    line-height: 60px;
+    
+}
+
+.contactHeading hr{
+    width: 70px;
+    margin: 30px auto 0px auto;
+    border: 5px solid black;
+   
+}
+
+
+.contact1{
+    grid-row: 2/2;
+    grid-column: 1/1;   
+    
+}
+
+.contact2{
+    grid-row: 2/2;
+    grid-column: 2/2;   
+}
+
+.contact3{
+    grid-row: 2/2;
+    grid-column: 3/3;   
+}
+
+.contact4{
+    grid-row: 2/2;
+    grid-column: 4/4;   
+}
+
+.contactIcons .fa-comment-dots, .contactIcons .fa-retweet, .contactIcons .fa-sms, .contactIcons .fa-envelope {
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+    transform: translateY(-25px);
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Itim', cursive;
+    margin-bottom: 40px;
+}
+
+.contact a:not(.contact4 a) {
+    text-decoration: none;
+    background: white;
+    padding: 15px 25px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "ProximaNova-Regular", Helvetica, sans-serif;
+    border: 2px solid black;   
+}
+
+.contact a:hover:not(.contact4 a){
+    background-color: black;
+    color: white;
+}
+
+
+.contact4 a{
+    text-decoration: none;
+    color: black; 
+}
+
+.contact4 p:first-of-type a:hover{ /*for twitter */
+    color: rgb(29, 112, 236);
+}
+
+.contact4  a:hover{ /*for twitter */
+    color: rgb(0, 45, 248);
+}
+
+
+
+/* CONTACT ENDS */
 
 .map{
     grid-area: map;
