@@ -1528,7 +1528,7 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
 }
 
 .sidePic {
-    background: url(/Images/sidebar/cat.jpg) no-repeat center center /cover;
+    background: url(./Images/sidebar/cat.jpg) no-repeat center center /cover;
     height: 170px;
     margin-bottom: 120px;
 
