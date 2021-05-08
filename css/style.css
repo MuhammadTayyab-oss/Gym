@@ -1471,7 +1471,7 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
 
 .cvrPic::before{
     content: "";
-    background: url(/Images/header/header8.jpg) no-repeat center center /cover;
+    background: url(../Images/header/header8.jpg) no-repeat center center /cover;
     height: 100%;
     width: 100%;
     position: absolute;
