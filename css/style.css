@@ -172,19 +172,27 @@ body {
 /* mid navbar items starts */
 .login-btn {
     margin-right: 80px;
-    background-color: rgb(255, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
     padding: 4px 23px 4px 23px;
-    border: 1px solid rgb(255, 0, 0);
+    /* border: 1px solid rgb(255, 0, 0); */
+   
     border-radius: 3px;
     font-weight: bolder;
     letter-spacing: 2px;
     cursor: pointer;
     order: 1;
-    
+    background-image:  linear-gradient(to right, #000000 0%, #ff0d07  51%, #000000  100%);
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    background-size: 200% auto;
+   transition: 0.5s;
 }
 
 .login-btn:hover {
-    color: black;
+    
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    /* text-decoration: none; */
  
 }
 /*hamburger menu */
@@ -2066,12 +2074,197 @@ font-family: 'Prata', serif;
 
 
 /***** REQUEST PAGE STARTS ****/
+.background {
+    position: relative;
+}
+
+.background::before {
+    content: "";
+    background: url(/Images/bg.jpg) center center /cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+    z-index: -1;
+    filter: blur(0px) brightness(0.7);
+}
 
 .main {
-    height: 1000px;
+    background: rgb(42 34 70 / 80%);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+.main form {
+    width: 50%;
+    
+   
+}
+
+
+
+.main p a{
+    color: #58C8FF;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.main p a:hover{
+    color: #20f5f5;
+
+}
+
+.main p:first-child{
+    font-size: 14px;
+    font-family: 'Averia Sans Libre';
+    align-self:flex-start;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: white;
+    
+   
+}
+
+.main h1{
+    font-family: 'Averia Sans Libre';
+    margin-bottom: 40px;
+    color: #20f5f5;
+}
+
+.main label {
+    font-size: 14px;
+    font-family: "ProximaNova-Regular", Helvetica, sans-serif;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: white;
+    cursor: pointer;
+
+}
+
+.main label:not([for=need],[for=file-select])::after {
+    content: "*";
+    color: rgb(255, 0, 0);
+    margin-left: 2px;
+    font-weight: bolder;
+    
+}
+
+.main select{
+    width: 100%;
+    height: 8%;
+    /* border: 1px solid black; */
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+    padding: 10px;
+    font-family: "ProximaNova-Regular", Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.main select:hover, .main select:focus {
+    color: #51bfeb;
+}
+
+.main option{
+    font-weight: bold;
+    word-spacing: 2px;
+    color: black;
+    font-size: 12px;
+    font-family: "ProximaNova-Regular", Helvetica, sans-serif;
+}
+
+.main input:not(input[type=submit]){
+    width: 100%;
+    height: 8%;
+    /* border: 1px solid black; */
+    background-color: white;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 30px;
+    
+}
+
+.main textarea:focus, .main input:focus{
+    outline: none;
+    color: #4b515d;
+    border: 2px solid #B8B6B6;
+    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.main textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+  
+}
+
+.main p:nth-last-child(4) {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 3em;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 30px;
+   
+}
+
+.main #submit {
+    /* width: 100%; */
+    text-align: center;
+    margin: 50px 0px 50px 0px;
+    
+}
+
+.main input[type=submit]{
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px 45px;
+    background-color: white;
+    
+    
+}
+
+.main input[type=submit]:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/*** SMALL SIZE MOBILE  ***/
+@media  (max-width: 800px){
+
+.main form {
+    width: 80%;
+    
+   
+}
+
+.main input[type=submit]{
+    width: 100%;
+    
 }
 
 
 
 
+}
+
 /***** REQUEST PAGE ENDS ****/
+
+
+
+
+
+
+
+
+
+

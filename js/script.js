@@ -60,6 +60,8 @@ function(event){
 
   document.querySelector("i").onclick = Togglebar;
   document.querySelector("body").onresize = myFunction;
- 
+
+  document.getElementById("need").selectedIndex = -1;
+  
   
 }) ;
