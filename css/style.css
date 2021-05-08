@@ -2014,9 +2014,7 @@ font-family: 'Prata', serif;
 @media  (max-width: 800px){
 
     .wrapper {
-       
         
-      
        grid-template-areas:
                              "cvrPic "
                              "sidebar "
@@ -2076,11 +2074,12 @@ font-family: 'Prata', serif;
 /***** REQUEST PAGE STARTS ****/
 .background {
     position: relative;
+    overflow-x: hidden;
 }
 
 .background::before {
     content: "";
-    background: url(/Images/bg.jpg) center center /cover;
+    background: url(../Images/req_bg.jpg) center center /cover;
     height: 100%;
     width: 100%;
     position: absolute;
