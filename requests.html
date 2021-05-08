@@ -45,41 +45,57 @@
         <nav class="navbar">
             <hr id="menuLine">
             <ul>
-                <li class="active"><a  id="home" href="index.html" ><span class="hicons"><i class="fas fa-home"></i></span><span class="hide">HOME</span></a></li>
-                <li><a  href="./about.html"><span class="hicons"><i class="fas fa-user"></i></i></span><span class="hide">ABOUT</span></a></li>
-                <li><a  href="./contact.html"><span class="hicons"><i class="fas fa-mobile-alt"></i></span><span class="hide">CONTACT US</span></a></li>
-                <li><a  href="./services.html"><span class="hicons"><i class="far fa-clock"></i></span><span class="hide">SERVICES</a></li>
+                <li><a href="index.html" ><span class="hicons"><i class="fas fa-home"></i></span><span class="hide">HOME</span></a></li>
+                <li><a href="./about.html"><span class="hicons"><i class="fas fa-user"></i></i></span><span class="hide">ABOUT</span></a></li>
+                <li><a href="./contact.html"><span class="hicons"><i class="fas fa-mobile-alt"></i></span><span class="hide">CONTACT US</span></a></li>
+                <li><a href="./services.html"><span class="hicons"><i class="far fa-clock"></i></span><span class="hide">SERVICES</a></li>
             </ul>
         </nav>
     </header>
 
     <hr id="progressbar">
+    <!--SAME HEADER ENDS-->
 
-    
+    <div class="main">
+        <h1>Submit a Request</h1>
+        <form action="story.html" method="GET">
+            <label for="need">Tell us what you need!</label>
+            <select id="need" name="need" required>
+                <option value="none">-</option>
+                <option value="I have a question about Gym membership">I have a question about Gym membership</option>
+                <option value="I am having trouble with the website">I am having trouble with the website</option>
+                <option value="I got some feedbacks for Goku Gym">I got some feedbacks for Goku Gym</option>
+                <option value="I would like to order gym stuff">I would like to order gym stuff</option>
+                <option value="I want to know the order position">I want to know the order position</option>
+                <option value="I got specific question for trainers">I got specific question for trainers</option>
+            </select>
+            <br>
+            <label for="Fname">First Name</label>
+           
+            <input id="Fname" type="text" name="FirstName" required> 
+            <label for="Lname">Last Name</label>
+            <input id="Lname" type="text" name="LastName" required>
+            <br> 
+            <label for="email">Enter your email address</label>
+            <br>
+            <input id="email" type="email" name="email" required>
+            <br>
+            <label for="subject">Subject</label>
+            <br>
+            <input id="subject" type="text" name="subject" required>
+            <br>
+            <label for="desc">Description</label>
+            <br>
+            <textarea id="desc" name="description" rows="8" cols="90" required ></textarea>
+             <p>Please mentioned the details of your request. Our team will respond as soon as possible.</p>
+            <br>
+            <input type="submit">
 
-    
-    <div class="container">
-        <div id="main-content">
-            <p>When you have a clear vision of your goal, it’s easier to take the first step toward it.</p>
-            <p>ARE YOU READY TO</p>
-            <p>GET POWER LEVEL, <br> OVER 9000!</p>
-            <a id="start" href="">START NOW</a>
-        </div>
+        </form>
 
-        <br>
-        <br>
-        <br>
-        <br><br>
-       
-        <br>
-        <br>
-        <br>
-        <br><br>
-       
-       
     </div>
-   
 
+  <!--SAME FOOTER STARTS-->
     <footer class="Fcontainer">
         <div id="footer-top-area">
             <section id="timings">
