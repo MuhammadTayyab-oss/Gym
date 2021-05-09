@@ -636,6 +636,10 @@ section h3{
     color: rgb(150, 226, 8);
 }
 
+#scrolltotop {
+    display: none;
+}
+
 .fa-arrow-circle-up {
     position:fixed ;
     bottom: 15px;
@@ -645,6 +649,7 @@ section h3{
     color: rgb(255, 0, 0);
     padding: 3px 5px 3px 5px;
     animation: ScrbtnUp 0.5s ease-in-out 0s 1;
+    
     
        
 }
@@ -674,7 +679,7 @@ section h3{
     bottom: 15px;
     left: 15px;
     transition: 1s;
-    /* animation: ScrbtnUp 0.5s ease-in-out 0s 1; */
+    animation: ScrbtnUp 0.5s ease-in-out 0s 1;
 }
 
 .fa-whatsapp:hover {
@@ -1305,7 +1310,7 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
 }
 
 
-#vid-sec::before, #vid-sec:after {
+/* #vid-sec::before, #vid-sec:after {
     content: "";
     position: absolute;
     left: -2px;
@@ -1316,7 +1321,7 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
     width: calc(100% +5px);
     z-index: -1;
 
-}
+} */
 /* Video section Ends*/
 
 
@@ -1854,11 +1859,28 @@ font-family: 'Prata', serif;
 .contact4 a{
     text-decoration: none;
     color: black; 
+    position: relative;
 }
 
 .contact4 p:first-of-type a:hover{ /*for twitter */
     color: rgb(29, 112, 236);
 }
+
+#borderLine p:nth-last-child(2) a::after{
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid black;
+    width: 80%;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    animation: hrlines 2s ease-in-out 1s 1 forwards; 
+}
+
+
 
 .contact4  a:hover{ /*for twitter */
     color: rgb(0, 45, 248);
@@ -2099,9 +2121,9 @@ font-family: 'Prata', serif;
     height: 100%;
     width: 100%;
     position: absolute;
-    
     z-index: -1;
     filter: blur(0px) brightness(0.7);
+    
 }
 
 .main {
@@ -2192,6 +2214,10 @@ font-family: 'Prata', serif;
     color: black;
     font-size: 12px;
     font-family: "ProximaNova-Regular", Helvetica, sans-serif;
+}
+
+.main input:after:invalid {
+    border: 2px solid red;
 }
 
 .main input:not(input[type=submit]){
