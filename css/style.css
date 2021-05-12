@@ -151,6 +151,22 @@ body {
 }
 
 /*ACTIVE CLASS */
+#login-btn {
+    background-image:  linear-gradient(to right, #26b4c7 0%, #1707ff  51%, #cfa414  100%);      
+    animation: loginMove 4s linear 0s infinite alternate-reverse;
+    box-shadow: 0 0 20px rgb(207, 19, 19);
+}
+
+@keyframes loginMove {
+    from {
+        background-position: 0% 200%;
+    }
+    to {
+        background-position: 200% 0%;
+    }
+  }
+  
+
 #home, #about, #services, #contact {  
     background-color:rgb(156, 36, 160);
     /* font-size: 1.2rem; */
@@ -181,19 +197,20 @@ body {
     letter-spacing: 2px;
     cursor: pointer;
     order: 1;
-    background-image:  linear-gradient(to right, #000000 0%, #ff0d07  51%, #000000  100%);
     color: white;            
+    background-image:  linear-gradient(to right, #000000 0%, #ff0d07  51%, #000000  100%);           
     box-shadow: 0 0 20px #eee;
     background-size: 200% auto;
-   transition: 0.5s;
+    transition: 0.5s;
+    /* animation: loginMove 4s linear 0s infinite alternate-reverse; */
 }
 
+
+
 .login-btn:hover {
-    
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     /* text-decoration: none; */
- 
 }
 /*hamburger menu */
  #toggleDiv{
@@ -295,7 +312,7 @@ body {
     z-index: -99;
     /* opacity: 0.8; */
     /* right: 300px; */
-    
+  
 /* -webkit-filter: blur(1px) brightness(0.5);
   -moz-filter: blur(1px) brightness(0.5);
   -ms-filter: blur(1px) brightness(0.5);
@@ -315,6 +332,8 @@ body {
     /*position relative for bg  image absolute*/
     font-size: 1vw;
     /* flex-direction: column; */
+    padding-bottom: 200px;
+
 }
 
 
@@ -370,28 +389,31 @@ body {
     font-weight: bolder;
     margin-left: 19.6%;
     font-family: 'Graduate', cursive;
-    
 }
 /* start now anchor */
+
+
 #start{  
-   display: block;
     text-decoration: none;  
     color: white;
     font-size: 1.2em;
     font-family: Poppins, sans-serif;
     font-weight: bold;
-    width: max-content;
+    width: max-content; 
     text-align: center;
-    align-items: center;
-    margin-right: auto;
-    margin-left:auto;
-    margin-top: 2%;
+    margin: 2% auto 0px auto;
     padding: 1.1% 2.8%;
     border: 2px solid rgb(255, 0, 0);
     border-radius: 50px;
     animation: goup 3s ease ;
     transition: 1s;
     transition-timing-function: ease-in-out;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    
+    
     
     
 }
@@ -404,6 +426,7 @@ body {
         opacity: 0;
         margin-top: 400px;
     }
+  
 }
 
 #start:hover{
@@ -436,9 +459,9 @@ body {
          /* leaving space between for picture */
         /* margin-top: 768px;      */
         border-top: 5px solid purple;
-        z-index: 100;
+        z-index: 3;
         overflow-x: hidden; /*removing white space from right side on small screen */
-        
+        position: relative;
         
 }
 
@@ -451,6 +474,7 @@ body {
         align-content: center;
         /* align-items:baseline; */
         /* text-align: center; */
+        
 }
 /* 
 #footer-top-area section  {
@@ -2228,6 +2252,9 @@ font-family: 'Prata', serif;
     padding: 10px;
     font-size: 15px;
     margin-bottom: 30px;
+    caret-color: rgb(245, 0, 0) ;
+    
+
     
 }
 
@@ -2243,6 +2270,8 @@ font-family: 'Prata', serif;
     width: 100%;
     padding: 10px;
     font-size: 17px;
+    caret-color: rgb(245, 0, 0);
+   
   
 }
 
@@ -2300,7 +2329,170 @@ font-family: 'Prata', serif;
 
 /***** REQUEST PAGE ENDS ****/
 
+/***SERVICES PAGE STARTS ****/
+/***SERVICES PAGE ENDS ****/
 
+
+
+
+
+/*** LOGIN PAGE STARTS ****/
+
+.LoginContainer::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(./Images/request_bg.png) no-repeat center center /cover;
+    filter: brightness(0.3);
+    z-index: -1;
+   
+    
+}
+
+.LoginContainer {
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.7) 50%, transparent 50%);
+    background-size: 100% 100%;
+    
+     position: relative;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     /* clip-path: polygon(0 0, 63% 0, 34% 100%, 0 100%); */
+     color: white;
+     padding: 50px;
+       
+}
+
+.LoginContainer .signinform .avatarSvg{
+    text-align: center;
+}   
+
+.LoginContainer .signinform h1{
+    text-align: center;
+    
+    font-family: 'Averia Sans Libre';
+}
+
+.LoginContainer form div {
+    border-bottom: green 2px solid;
+    margin: 20px 0px 0px 0px; 
+    
+}
+
+.LoginContainer form i{
+    padding: 0px 5px;
+}
+
+.LoginContainer input{
+    color: white;
+    height: 40px;
+    width: 250px;
+    padding: 10px;
+    background: transparent;
+   
+    border: none;
+    font-size: 15px;
+   transition: 500ms;
+    /* caret-color: rgb(245, 0, 0) ; */
+    outline: none;
+}
+
+
+.LoginContainer input:-webkit-autofill {
+    
+    background-color: transparent !important;
+    /* box-shadow: 0 0 0 50px white inset; */
+}
+
+
+.LoginContainer input:focus{
+    box-shadow: 0px 12px 10px -10px rgb(51, 165, 85);
+    
+}
+
+
+
+
+
+.LoginContainer .signinform  > a:first-of-type{
+    font-size: 12px;
+    margin: 8px 0px -6px 0px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    
+}
+
+.LoginContainer .signinform a #Pass{
+    color: rgb(82, 173, 73);
+    cursor: pointer;
+}
+
+.LoginContainer .signinform a #Pass:hover{
+    color: rgb(0, 255, 0);
+
+}
+.LoginContainer .signin {
+    border: 2px solid green;
+    text-align: center;
+   
+    transition: 300ms;
+    
+}
+
+.LoginContainer .signin input[type=submit]{
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.LoginContainer .signin:hover {
+    background-image:  linear-gradient(to right, #091409 0%, #000000  0%, #001b08  100%);      
+    animation: loginMove 4s linear 0s infinite alternate-reverse;
+    box-shadow: 0 0 5px rgb(2, 248, 35);
+    
+}
+
+.LoginContainer p {
+    text-align: center;
+    font-weight: bolder;
+    margin: 20px;
+    font-size: 14px;
+}
+
+
+.LoginContainer .fbgmail{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.LoginContainer .fbgmail i{
+    margin-right: 10px;
+}
+
+
+.LoginContainer .fbgmail a{
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    width: 48%;
+}
+
+
+.LoginContainer .fbgmail a:first-child{
+    background-color: blue;
+}
+
+.LoginContainer .fbgmail a:last-child{
+    background-color: rgb(255, 0, 0);
+}
+/*** LOGIN PAGE ENDS****/
 
 
 

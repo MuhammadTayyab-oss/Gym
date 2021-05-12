@@ -23,7 +23,7 @@
 </head>
 
 <body id="home_page">
-    
+
     <header class="Hcontainer">
         <!-- <figure class="left-navbar">
             <a href="index.html">
@@ -32,32 +32,74 @@
             </a>
         </figure> -->
         <div class="left-navbar">
-            
+
             <a href="index.html">
                 <img id="logo" src="./Images/dumblogo.png" alt="dumbell">
                 <h1 id="Brand-Name">GOKU GYM</h1>
             </a>
         </div>
-        <a class="login-btn" href="./Login.html">LOGIN</a> <!--login button-->
-          <div id="toggleDiv">
-              <i id="menu" class="fas fa-bars"></i> <!--hamburger menu toggle button--> 
-            </div>
+        <a class="login-btn active" id="login-btn" href="./Login.html">LOGIN</a>
+        <!--login button-->
+        <div id="toggleDiv">
+            <i id="menu" class="fas fa-bars"></i>
+            <!--hamburger menu toggle button-->
+        </div>
         <nav class="navbar">
             <hr id="menuLine">
             <ul>
-                <li><a href="index.html" ><span class="hicons"><i class="fas fa-home"></i></span><span class="hide">HOME</span></a></li>
-                <li><a href="./about.html"><span class="hicons"><i class="fas fa-user"></i></i></span><span class="hide">ABOUT</span></a></li>
-                <li><a href="./contact.html"><span class="hicons"><i class="fas fa-mobile-alt"></i></span><span class="hide">CONTACT US</span></a></li>
-                <li><a href="./services.html"><span class="hicons"><i class="far fa-clock"></i></span><span class="hide">SERVICES</a></li>
+                <li><a href="index.html"><span class="hicons"><i class="fas fa-home"></i></span><span
+                            class="hide">HOME</span></a></li>
+                <li><a href="./about.html"><span class="hicons"><i class="fas fa-users"></i></i></span><span
+                            class="hide">ABOUT</span></a></li>
+                <li><a href="./contact.html"><span class="hicons"><i class="fas fa-mobile-alt"></i></span><span
+                            class="hide">CONTACT US</span></a></li>
+                <li><a href="./services.html"><span class="hicons"><i class="far fa-clock"></i></span><span
+                            class="hide">SERVICES</a></li>
             </ul>
         </nav>
     </header>
 
     <hr id="progressbar">
- <!--SAME HEADER ENDS-->
+    <!--SAME HEADER ENDS-->
 
-  <!--SAME FOOTER STARTS-->
-    
+    <div class="LoginContainer">
+        <div class="svg">
+            <img src="./Images/svg/undraw_Sign_in_re_o58h.svg" height="700px" width="400px" alt="login svg image">
+        </div>
+        <div class="signinform">
+            <div class="avatarSvg">
+                <img src="/Images/svg/avatar_purple.svg" height="100px" width="100px"
+                    alt="user avatar svg image">
+            </div>
+            <h1>Welcome!</h1>
+            <form>
+                <!-- <label for="userid">Username</label> -->
+                <div>
+                    <i class="fas fa-user"></i><input id="userid" type="text" name="userID"
+                        placeholder="Username or Email" required>
+                </div>
+                <!-- <label for="pass">Password</label> -->
+                <div>
+                    <i class="fas fa-lock"></i><input id="pass" type="password" name="password" placeholder="Password"
+                        required>
+                </div>
+                <div class="signin">
+                    <input type="submit" value="Sign in">
+                    <!-- <a>Sign in</a> -->
+                </div>
+            </form>
+            <a>Forgot <span id="Pass">Password?</span></a>
+            <p>Or login with</p>
+            <div class="fbgmail">
+                <a href="https://www.facebook.com/only4RahulFriendsnBeliebers/"><i
+                        class="fab fa-facebook-f"></i>Facebook</a>
+                <a href="mailto:rahul_7872@gmail.com"><i class="fab fa-google"></i>Google</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--SAME FOOTER STARTS-->
     <footer class="Fcontainer">
         <div id="footer-top-area">
             <section id="timings">
