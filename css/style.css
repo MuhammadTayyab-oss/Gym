@@ -2349,13 +2349,12 @@ font-family: 'Prata', serif;
     filter: brightness(0.3);
     z-index: -1;
    
-    
+  
 }
 
 .LoginContainer {
-    background: linear-gradient(120deg, rgba(0, 0, 0, 0.7) 50%, transparent 50%);
-    background-size: 100% 100%;
-    
+     background: linear-gradient(120deg, rgba(17, 5, 23, 0.8) 50%, transparent 50%);
+     background-size: 100% 100%;
      position: relative;
      display: flex;
      justify-content: space-around;
@@ -2364,12 +2363,22 @@ font-family: 'Prata', serif;
      /* clip-path: polygon(0 0, 63% 0, 34% 100%, 0 100%); */
      color: white;
      padding: 50px;
+     overflow: hidden;
        
 }
 
+.LoginContainer .svg img{
+    transform: translate(-100px, -60px);
+    height: 700px;
+     width: 400px;
+
+}
+
+
 .LoginContainer .signinform .avatarSvg{
-    text-align: center;
+    text-align: center; 
 }   
+ 
 
 .LoginContainer .signinform h1{
     text-align: center;
@@ -2526,6 +2535,68 @@ font-family: 'Prata', serif;
     box-shadow: 0 5px 25px rgba(255, 99, 99, 0.25);
 }
 
+
+
+
+
+
+/**** MEDIA QUERIES ***/
+
+/****Large devices ***/
+@media (min-width:891px) and (max-width: 980px){
+
+    .LoginContainer .svg img{
+        transform: translate(-50px, -50px);
+        height: 400px;
+         width: 300px;
+    
+    }
+    
+
+}
+
+
+
+
+
+/****MEDIUM TABLET Devices ***/
+@media (min-width: 801px)  and (max-width: 890px){
+
+    .LoginContainer .svg img{
+        transform: translate(-50px, -60px);
+        height: 400px;
+         width: 250px;
+    
+    }
+    
+
+}
+
+
+
+
+/*** SMALL PHONE devices ***/
+@media  (max-width: 800px){
+
+    .LoginContainer::before{
+        padding-bottom: 100px;
+    }
+    .LoginContainer {
+        background: linear-gradient(150deg, rgba(17, 5, 23, 0.8) 50%, transparent 50%);
+        flex-direction: column;
+        padding-bottom: 100px;
+    }
+
+
+    .LoginContainer .svg img{
+        transform: translate(0px, -40px);
+        height: 400px;
+         width: 300px;
+    
+    }
+    
+
+}
 
 /*** LOGIN PAGE ENDS****/
 
