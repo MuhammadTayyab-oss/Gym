@@ -2508,7 +2508,7 @@ font-family: 'Prata', serif;
 .LoginContainer .fbgmail a span:nth-child(2):hover{
     color: black;
     background: white;
-    clip-path: polygon(60% 0, 100% 0%, 100% 100%, 60% 100%, 50% 53%);
+    clip-path: polygon(74% 0, 100% 0%, 100% 100%, 74% 99%, 52% 50%);
 
 
 }
