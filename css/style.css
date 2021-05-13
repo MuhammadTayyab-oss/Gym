@@ -2418,7 +2418,9 @@ font-family: 'Prata', serif;
     
 }
 
-
+.LoginContainer .signinform form {
+    width: max-content;
+}
 
 
 
