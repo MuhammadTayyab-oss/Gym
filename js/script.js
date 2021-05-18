@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",
 function(event){ 
  
   function Togglebar() {
-    var icon = document.querySelector("i");
+   
     var nav = document.querySelector(".navbar");
 
       
@@ -59,7 +59,7 @@ function(event){
 
 
 
-  document.querySelector("i").onclick = Togglebar;
+  document.querySelector("#menu").onclick = Togglebar;
   document.querySelector("body").onresize = myFunction;
 
   document.getElementById("need").selectedIndex = -1;
