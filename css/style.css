@@ -1395,6 +1395,11 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
 
 /*** SMALL SIZE MOBILE  ***/
 @media  (max-width: 800px){
+    
+    .about .image::before {
+        content: "";
+        background: url(../Images/gokuteam.jpg) no-repeat center center/100% 100%;
+    }
 
     .about section:first-of-type {
     
@@ -2341,11 +2346,6 @@ font-family: 'Prata', serif;
 
 /***SERVICES PAGE STARTS ****/
 
-.serviceContainer {
-    height: 1000px;
-    
-    
-}
 
 .svgheading:before {
     content: "";
@@ -2468,7 +2468,43 @@ font-family: 'Prata', serif;
    
 }
 
+.services {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* align-items: center; */
+    height: 1000px;
+    flex-wrap: wrap;
+}
 
+.services > div {
+    border: 2px solid black;
+    padding: 100px 150px;
+    flex-basis: 30%;
+    position: relative;
+
+    
+}
+
+.services div:nth-child(1)::before{
+    background: url;
+   
+}
+.services div:nth-child(2)::before{
+   
+}
+.services div:nth-child(3)::before{
+   
+}
+.services div:nth-child(4)::before{
+   
+}
+.services div:nth-child(5)::before{
+   
+}
+.services div:nth-child(6)::before{
+   
+}
 
 
 
@@ -2566,6 +2602,7 @@ font-family: 'Prata', serif;
         /* background-position: center -200px; */
         background-size: 100% 100%;
         /* background-size: cover; */
+        
     
         }
 
