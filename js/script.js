@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded",
 function(event){ 
- 
+
+
+
+
   function Togglebar() {
    
     var nav = document.querySelector(".navbar");
@@ -11,15 +14,14 @@ function(event){
 
        if (nav.style.display === "none") {
        nav.style.display = "block ";
-       menuIcon.style.display ="none";
-       XIcon.style.display ="inline-block";
+      //  menuIcon.style.display ="none";
+      //  XIcon.style.display ="inline-block";
      } else {
        nav.style.display = "none ";
-       XIcon.style.display ="none";
-       menuIcon.style.display ="inline-block";
+      //  XIcon.style.display ="none";
+      //  menuIcon.style.display ="inline-block";
       }
     
-
      
   }
 

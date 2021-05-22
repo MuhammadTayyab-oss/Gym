@@ -224,7 +224,7 @@ body {
     
 }
 
-#menu, #Xmenu{
+#menu{
     cursor: pointer;
     font-size: 30px;
     border-radius: 50px;
@@ -876,24 +876,21 @@ section h3{
 
 .navbar {
     display: none;
-    animation: collapse 0s ease-in-out 3s forwards 1;
-    height: 100%;
-    transition: height 2s ease;
+    animation: collapse 1s ease-in-out 0s forwards 1;
+
+    
 }
 
 
-.navbar ul{
-    animation: collapse 0s ease-in-out 3s forwards 1;
-    height: 100%;
-}
+
 
 @keyframes collapse {
     from {
-        height: 0%
+        transform:translateY(-100%);
     }
 
     to {
-        height: 100%
+        transform:translateY(0%);
     }
 }
 
@@ -985,17 +982,14 @@ section h3{
     
 }
 
-#Xmenu {
-    margin-top: 10px;
-    display: none;
-}
+
 
 #menuLine {
     display: block;
     margin-top: 10px;
     border: 2px solid rgb(5, 211, 5);
     width: 100%;
-    animation: menuline 1s ease-in-out 1 forwards; 
+    animation: menuline 2s ease-in-out 500ms 1 forwards; 
     /* name duration timing-function delay iteration-count direction fill-mode; */
  
 }
