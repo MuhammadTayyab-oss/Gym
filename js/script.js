@@ -4,20 +4,26 @@ function(event){
   function Togglebar() {
    
     var nav = document.querySelector(".navbar");
+    var menuIcon = document.querySelector("#menu");
+    var XIcon = document.querySelector("#Xmenu");
 
       
 
        if (nav.style.display === "none") {
        nav.style.display = "block ";
+       menuIcon.style.display ="none";
+       XIcon.style.display ="inline-block";
      } else {
        nav.style.display = "none ";
+       XIcon.style.display ="none";
+       menuIcon.style.display ="inline-block";
       }
     
 
      
   }
 
-  function myFunction() {
+  function myFunction() {            /* this function shows navbar in full screen, when its closed in small size through togglebar */
     var w = window.innerWidth;
   
     if (w > 800) {
@@ -28,6 +34,7 @@ function(event){
     }
   }
 
+ 
 
   var scrollbtn = document.getElementById("scrolltotop")
 
@@ -60,6 +67,7 @@ function(event){
 
 
   document.querySelector("#menu").onclick = Togglebar;
+  document.querySelector("#Xmenu").onclick = Togglebar;
   document.querySelector("body").onresize = myFunction;
 
   document.getElementById("need").selectedIndex = -1;
