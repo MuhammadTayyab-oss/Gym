@@ -9,32 +9,40 @@ function(event){
     var nav = document.querySelector(".navbar");
     var menuIcon = document.querySelector("#menu");
     var XIcon = document.querySelector("#Xmenu");
-
+    var shows = document.querySelector(".navbar.show");
       
-
-       if (nav.style.display === "none") {
-       nav.style.display = "block ";
-      //  menuIcon.style.display ="none";
-      //  XIcon.style.display ="inline-block";
-     } else {
-       nav.style.display = "none ";
-      //  XIcon.style.display ="none";
-      //  menuIcon.style.display ="inline-block";
-      }
     
-     
-  }
+    nav.classList.toggle("show");
+   if ( nav.classList.contains('show')){
+    menuIcon.style.display = "inline-block";
+    XIcon.style.display = "none";
+   }else {
+    XIcon.style.display ="inline-block";
+    menuIcon.style.display ="none";
+   }
+    //    if (shows.style.display === "none") {
+    //   //  nav.style.display = "block ";
+    //    menuIcon.style.display = "inline-block";
+    //    XIcon.style.display = "none";
+    //  } else {
+    //   //  nav.style.display = "none ";
+    //    XIcon.style.display ="inline-block";
+    //    menuIcon.style.display ="none";
+    //   }
 
-  function myFunction() {            /* this function shows navbar in full screen, when its closed in small size through togglebar */
-    var w = window.innerWidth;
-  
-    if (w > 800) {
-      document.querySelector('.navbar').style.display ='block';
-    }
-    else {
-      document.querySelector('.navbar').style.display='none';
-    }
+   
   }
+/* this function shows navbar in full screen, when its closed in small size through togglebar */
+  // function myFunction() {            
+  //   var w = window.innerWidth;
+  
+  //   if (w > 800) {
+  //     document.querySelector('.navbar').style.display ='block';
+  //   }
+  //   else {
+  //     document.querySelector('.navbar').style.display='none';
+  //   }
+  // }
 
  
 
@@ -67,10 +75,12 @@ function(event){
  
 
 
-
+  
   document.querySelector("#menu").onclick = Togglebar;
   document.querySelector("#Xmenu").onclick = Togglebar;
-  document.querySelector("body").onresize = myFunction;
+  // document.querySelector("body").onresize = myFunction;
+  
+  
 
   document.getElementById("need").selectedIndex = -1;
   

@@ -261,7 +261,7 @@ body {
     
 }
 
-#menu{
+#menu, #Xmenu{
     cursor: pointer;
     font-size: 30px;
     border-radius: 50px;
@@ -849,14 +849,12 @@ section h3{
 /*** SMALL SIZE MOBILE  ***/
 @media  (max-width: 800px){
     .circle:hover {
-        
         clip-path: circle(500px at 0 10%);
         z-index: 5;
     }
 
 .Hcontainer{
-    display: block;
-    
+    display: block;  
 }
 
 .login-btn{
@@ -868,7 +866,6 @@ section h3{
    /* display: block;
    width: fit-content;
    margin: 5px auto; */
-    
 }
 
 .left-navbar img{
@@ -915,47 +912,91 @@ section h3{
     float: left;
 }
 
-.navbar {
+
+
+.navbar{
+    display: block;
+    animation: expand 1.5s ease-in-out 0s forwards 1;
+}
+
+.navbar.show{
     display: none;
-    animation: collapse 1s ease-in-out 0s forwards 1;
+    animation: collapse 1.5s ease-in-out 0s 1 normal forwards;
+}
 
+
+/* .navbar.show{
     
-}
+    animation: collapse 1.5s ease-in-out 0s forwards 1;
+    
+} */
 
-
-
-
-@keyframes collapse {
+@keyframes expand { /* collapse bar smooth expansion */
     from {
-        transform:translateY(-100%);
+        
+        height: 0px;
     }
-
-    to {
-        transform:translateY(0%);
+    to  {
+        height: 245px;
     }
 }
+
+@keyframes collapse { /* collapse bar smooth expansion */
+    0% {
+        height: 245px;
+    }
+    100%  {
+        height: 0px;
+    }
+}
+
 
 
 .navbar ul  {
-    
-    flex-direction: column;
+        flex-direction: column;
         text-align: center;
-         padding-top: 10px;
+        padding-top: 10px;
         clear: both;  
         align-items: center; 
-        
-        
+       
 }
 
 
 .navbar ul li{
     font-size: 0.8em;
-   padding-bottom: 10px;
-    width: 90%;
-    
+    padding-bottom: 10px;
+    width: 90%;    
+}
+
+.navbar ul li:nth-child(1){
+    animation: itemShow 0.9s ease-in-out 0s 1 forwards;
+}
+.navbar ul li:nth-child(2){
+    animation: itemShow 1.2s ease-in-out 0s 1 forwards;
+}
+.navbar ul li:nth-child(3){
+    animation: itemShow 1.7s ease-in-out 0s 1 forwards;
+}
+.navbar ul li:nth-child(4){
+    animation: itemShow 2s ease-in-out 0s 1 forwards;
+}
+
+@keyframes itemShow {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
     
 }
 
+.navbar ul li a{
+    display: block;    
+ 
+}
 
 #main-content  p:first-child{
     font-size: 5em ;
@@ -1015,22 +1056,38 @@ section h3{
     clear: both;
     display: block;
 }
+
 #menu {
     display: inline-block;
     /* clear: both; */
     /* text-align: end; */
     margin-top: 10px;
-    
 }
 
+#Xmenu {
+    display: none;
+    margin-top: 10px;
+    animation: X 2.2s ease 0s 1;
+   
+}
 
+@keyframes X {
+    from {  
+        
+        transform: translate(60px, -60px) rotate(360deg);
+    }
+    to {  
+        transform: translate(0px) rotate(0deg);
+    }
+    
+}
 
 #menuLine {
     display: block;
     margin-top: 10px;
     border: 2px solid rgb(5, 211, 5);
     width: 100%;
-    animation: menuline 2s ease-in-out 500ms 1 forwards; 
+    animation: menuline 2s ease-in-out 0s 1 forwards; 
     /* name duration timing-function delay iteration-count direction fill-mode; */
  
 }
@@ -1434,6 +1491,8 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
 
 /*** SMALL SIZE MOBILE  ***/
 @media  (max-width: 800px){
+
+  
     
     .about .image::before {
         content: "";
@@ -1441,7 +1500,6 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
     }
 
     .about section:first-of-type {
-    
         flex-direction: column;
         justify-content: space-around;
         padding: 100px 50px 100px 50px; 
@@ -1473,9 +1531,6 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
         flex-direction: column;
         padding: 0px 0px 70px 0px;
         align-content: center;
-        
-        
-       
     }
 
     #vid-sec, #video #text{
@@ -1505,10 +1560,10 @@ transform: rotateY(calc(var(--i)* 45deg)) translateZ(350px);
         display: none;
     }
 
-    #down-arrow{
+    #down-arrow {
         display: block;
         margin-top: 20px;
-        font-size: 2em;
+        font-size: 2em; 
     }
 }
 
