@@ -2685,7 +2685,7 @@ font-family: 'Prata', serif;
 .services .card .face.backside::before {
     /* background: url(../Images/services/PT.jpg) no-repeat center center /cover; */
     /* background: linear-gradient(160deg, green 50%, blue 50%); */
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1)  , rgba(255, 255, 255, 1) ,rgba(0, 0, 0, 1));
+    /* background: linear-gradient(90deg, rgba(0, 0, 0, 1)  , rgba(255, 255, 255, 1) ,rgba(0, 0, 0, 1)); /*
     filter: blur(0px) brightness(1);
 
 }
